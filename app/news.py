@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 import feedparser
@@ -9,6 +8,7 @@ HEADERS = {
 }
 
 SOURCES = [
+    # Оригинальные источники
     {
         "name": "banki",
         "type": "html",
@@ -20,6 +20,109 @@ SOURCES = [
         "name": "ria-economy",
         "type": "rss",
         "url": "https://ria.ru/export/rss2/economy/index.xml"
+    },
+    
+    # Футбол (Soccer)
+    {
+        "name": "bbc_football",
+        "type": "rss",
+        "url": "http://feeds.bbci.co.uk/sport/football/rss.xml"
+    },
+    {
+        "name": "sky_football",
+        "type": "rss",
+        "url": "https://www.skysports.com/rss/11095/feed.xml"
+    },
+    {
+        "name": "espn_football",
+        "type": "rss",
+        "url": "https://www.espn.com/espn/rss/soccer/news"
+    },
+    {
+        "name": "guardian_football",
+        "type": "rss",
+        "url": "https://www.theguardian.com/football/rss"
+    },
+    {
+        "name": "goal",
+        "type": "rss",
+        "url": "https://www.goal.com/feeds/en/news"
+    },
+    
+    # Баскетбол (Basketball)
+    {
+        "name": "nba_official",
+        "type": "rss",
+        "url": "https://www.nba.com/news/rss.xml"
+    },
+    {
+        "name": "espn_nba",
+        "type": "rss",
+        "url": "https://www.espn.com/espn/rss/nba/news"
+    },
+    {
+        "name": "bleacher_nba",
+        "type": "rss",
+        "url": "https://bleacherreport.com/nba/feed"
+    },
+    {
+        "name": "cbs_nba",
+        "type": "rss",
+        "url": "https://www.cbssports.com/nba/rss/news"
+    },
+    {
+        "name": "yahoo_nba",
+        "type": "rss",
+        "url": "https://sports.yahoo.com/nba/rss"
+    },
+    
+    # Формула-1 (Formula 1)
+    {
+        "name": "f1_official",
+        "type": "rss",
+        "url": "https://www.formula1.com/content/fom-website/en/latest/all.xml"
+    },
+    {
+        "name": "bbc_f1",
+        "type": "rss",
+        "url": "http://feeds.bbci.co.uk/sport/formula1/rss.xml"
+    },
+    {
+        "name": "sky_f1",
+        "type": "rss",
+        "url": "https://www.skysports.com/rss/12040/feed.xml"
+    },
+    {
+        "name": "espn_f1",
+        "type": "rss",
+        "url": "https://www.espn.com/espn/rss/f1/news"
+    },
+    {
+        "name": "autosport_f1",
+        "type": "rss",
+        "url": "https://www.autosport.com/rss/f1/news"
+    },
+    
+    # Общие спортивные новости (All Sports)
+    {
+        "name": "bbc_sport_all",
+        "type": "rss",
+        "url": "http://feeds.bbci.co.uk/sport/rss.xml"
+    },
+    {
+        "name": "espn_all",
+        "type": "rss",
+        "url": "https://www.espn.com/espn/rss/news"
+    },
+    {
+        "name": "sky_sports_all",
+        "type": "rss",
+        "url": "https://www.skysports.com/rss/12040/feed.xml"
+    },
+    {
+        "name": "yahoo_sports_all",
+        "type": "rss",
+        "url": "https://sports.yahoo.com/rss"
     },
 ]
 
