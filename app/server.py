@@ -1,13 +1,12 @@
-
 import os
 import asyncio
 import logging
 from fastapi import FastAPI
 
-from .news import get_candidates, fetch_article_text
-from .rewrite import rewrite_news
-from .publish import post_to_telegram
-from .storage import is_posted, mark_posted
+from news import get_candidates, fetch_article_text
+from rewrite import rewrite_news
+from publish import post_to_telegram
+from storage import is_posted, mark_posted
 
 app = FastAPI(title="Autoposter Health")
 
