@@ -4,10 +4,10 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
-from news import get_candidates, fetch_article_text
-from rewrite import rewrite_news
-from publish import post_to_telegram
-from storage import is_posted, mark_posted
+from app.news import get_candidates, fetch_article_text
+from app.rewrite import rewrite_news
+from app.publish import post_to_telegram
+from app.storage import is_posted, mark_posted
 
 CHECK_INTERVAL = int(os.getenv("CHECK_INTERVAL", "30"))
 RUN_ON_STARTUP = os.getenv("RUN_ON_STARTUP", "true").lower() == "true"
